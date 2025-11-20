@@ -2,27 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <!-- Your optional styles can go here -->
+    <title>Legacy Application Sign-In</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f4; }
+        .login-container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        input[type="text"], input[type="password"] { width: 100%; padding: 10px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        input[type="submit"] { background-color: #0078d4; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; width: 100%; }
+    </style>
 </head>
 <body>
     <div class="login-container">
-        <h2>Login</h2>
-        
-        <!-- The 'action' attribute should point to your application's actual backend login endpoint -->
-        <form action="/login" method="POST">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
+        <h2>Sign in to Legacy App</h2>
+        <form id="loginForm" method="POST" action="/api/login">
+            <label for="username">Username (Email):</label>
+            <input type="text" id="username" name="username" required>
             
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
             
-            <button type="submit">Login</button>
+            <input type="submit" value="Sign In">
         </form>
     </div>
 </body>
