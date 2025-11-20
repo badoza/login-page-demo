@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Your optional styles can go here -->
 </head>
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <!-- 
-          The action="/login" will not work on GitHub Pages, as it requires server-side processing. 
-          This form is purely for visual demonstration in this static deployment.
-        -->
-        <form action="#" method="POST"> 
+        
+        <!-- The 'action' attribute should point to your application's actual backend login endpoint -->
+        <form action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
